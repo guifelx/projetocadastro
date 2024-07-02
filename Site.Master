@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Projeto3.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- StyleSheet.css contém classes para diversos estilos -->
+    <link href="Css_Javascript/StyleSheet.css" rel="stylesheet" />
+    <!-- Projeto.css contém as classes para estruturar a master page -->
+    <link href="Css_Javascript/Projeto.css" rel="stylesheet" />
+    <!-- RECURSOS PARA EXIBIR SLIDES -->
+    <link href="Css_Javascript/flexslider.css" rel="stylesheet" />
+    <!-- PRIMEIRO ESTA BIBLIOTECA -->
+    <script src="Css_Javascript/jquery-1.7.2.min.js"></script>
+    <script src="Css_Javascript/flexslider.min.js"></script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- CABEÇALHO -->
+        <div class="cabecalho">
+            <!-- LOGOMARCA -->
+            <div class="logomarca">
+                <img src="../Images/logo105px.png" />
+            </div>
+            <!-- BARRA TÍTULO -->
+            <div class="barra-titulo">
+                D'terra organic food
+            </div>
+            <!-- BARRA DO MENU -->
+            <div class="barra-menu">
+                <a href="../Default.aspx">Home</a>
+                <a href="../Sobre.aspx">Sobre</a>
+
+                <asp:HyperLink ID="Excecoes" Visible="false" NavigateUrl="~/Admin/ExibirError.aspx" runat="server">Exceções</asp:HyperLink>
+
+                <asp:HyperLink NavigateUrl="~/Admin/ExibirUsuarios.aspx" ID="CadastroUsuarios" runat="server">Usuários</asp:HyperLink>
+
+                <asp:HyperLink NavigateUrl="~/Admin/ExibirTodosAcessos.aspx" ID="ExibirAcessos" runat="server">Acessos</asp:HyperLink>
+
+                <asp:HyperLink NavigateUrl="~/Admin/ExibirClientes.aspx" ID="ExibirClientes" runat="server">Clientes</asp:HyperLink>
+
+                <a href="../FaleConosco.aspx">Contato</a>
+
+                <asp:HyperLink ID="Login" NavigateUrl="~/Login.aspx" Visible="true" runat="server">Entrar</asp:HyperLink>
+
+                <asp:LinkButton ID="Logout" Visible="false" OnClick="Logout_Click" runat="server">Sair</asp:LinkButton>
+            </div>
+        </div>
+
+
+        <!-- CONTEÚDO -->
+        <div class="conteudo content-wrap">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- RODAPÉ -->
+        <div class="rodape">
+            <div class="content-wrap">
+                © 2024 D'terra Organic Food Ltda. Todos os direitos reservados. CNPJ: 00.000.000/0000-00
+            </div>
+        </div>
+    </form>
+</body>
+</html>

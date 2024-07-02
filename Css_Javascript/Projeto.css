@@ -1,0 +1,76 @@
+﻿/* PROJETO WEB - ESTRUTURA DA MASTER PAGE */
+
+
+/* CABEÇALHO  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Sriracha&display=swap');
+
+
+.cabecalho {
+    height: 130px;
+    width: 100vw;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: #14591D;
+    font-family: 'Poppins', sans-serif;
+    /* permite que elementos tenham posições ABSOLUTAS dentro do cabeçalho */
+    position: relative;
+    background-color: #FFB400;
+    border-bottom: 1.6px solid #14591D;
+}
+
+.logomarca {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    height: 80px;
+    width: 80px;
+}
+
+.barra-titulo {
+    position: absolute;
+    top: 40px;
+    left: 81px;
+    right: 0;
+    bottom: 40px;
+    /* padding-left:80px; */
+    padding-top: 10px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.barra-menu {
+    color: #14591D;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 81px;
+    right: 40px;
+    bottom: 0;
+    height: 30px;
+    text-align: right;
+}
+
+    .barra-menu a {
+        color: #14591D;
+        font-size: 16px;
+        margin-left: 4px;
+        margin-right: 4px;
+        padding-bottom: 2px;
+        text-decoration: none;
+    }
+
+        .barra-menu a:hover {
+            color: #14591D;
+            text-shadow: 1px 1px 1px #14591D;
+        }
+
+
+.conteudo {
+    min-height: 800px;
+}
+
+.rodape {
+    height: 100px;
+    background-color: #14591D;
+    color:#FFB400; 
+    padding: 20px;
+}
